@@ -1,0 +1,21 @@
+Kristopher Baker
+CSC 479
+Programming Assignment #2: Constraint Satisfaction Problems & the MRV Heuristic
+Usage of my program:
+
+The "File" menu contains items for "New", "Open", "Save", and "Exit".  "New" will clear the board.  "Open" allows you to open a text file as described in the assignment.  "Save" allows you to save the current board.  "Exit" will exit the program.
+
+The "Solve" menu contains items for "Uninformed Agent" and "CSP Agent".  These will solve the current board using the appropriate algorithm.  If a solution is found, the board will be set to the solution after the search finishes.
+
+The board can be modified by first selecting a cell by left clicking on the cell, then using any of the keys for valid values (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F) or any of the cell clearing keys (delete, backspace).  Mouse right-click can be used to deselect the currently selected cell.  When changing values for a cell, only legal changes can be made.
+Results:
+SuperSudokuTest1.txt is the sample provided for the assignment, with SuperSudokuTest2.txt based off of SuperSudokuTest1.txt, but with random cells removed.  Each of the rest of the test files are the same, being based off the previous one, but with random cells removed.
+File					Uninformed Assignments		CSP Assignments
+SuperSudokuTest1.txt	402							100
+SuperSudokuTest2.txt	1,067						111
+SuperSudokuTest3.txt	22,379						211
+SuperSudokuTest4.txt	75,125						344
+SuperSudokuTest5.txt	943,174						486
+SuperSudokuTest6.txt	3,314,635					727
+
+As can be seen from these results, the number of assignments for an uninformed search grows quite a bit faster than that  of CSP.  It almost appears as if the growth in assignments is exponential for uninformed search, while the growth is more linear for CSP, at least for these small set of test files.  The one thing I might've changed with my CSP search is to find a way to lower the number of times I search for the MRV cell if I've already searched the same cells before, but this is a minimal optimization and perhaps not worth it for this problem.  I'm guessing the CSP search could be improved even further with additional heuristics, but it's already clear from the set of test files that CSP can be significantly faster than an uninformed search for problems such as Sudoku.
