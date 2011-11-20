@@ -11,8 +11,8 @@ namespace SuperSudoku
     /// </summary>
     public abstract class BaseSearch : ISearch
     {
-        public int TotalAssignments { get; protected set; }
-        public SudokuBoard Solution { get; protected set; }
+        public virtual int TotalAssignments { get; protected set; }
+        public virtual SudokuBoard Solution { get; protected set; }
 
         public virtual SudokuBoard Search(SudokuBoard sudokuBoard)
         {

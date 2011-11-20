@@ -9,7 +9,7 @@ namespace SuperSudoku
     /// <summary>
     /// Uninformed search
     /// </summary>
-    public sealed class UninformedSearch : BaseSearch
+    public class UninformedSearch : BaseSearch
     {
         /// <summary>
         /// Finds the next position by finding the next blank character, 

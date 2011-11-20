@@ -134,11 +134,12 @@ namespace SuperSudoku
 
             var x2 = col - (col % 4);
             var x2Max = col - (col % 4) + 4;
+            var y2Min = row - (row % 4);
             var y2Max = row - (row % 4) + 4;
 
             for (; x2 < x2Max; x2++)
             {
-                for (var y2 = row - (row % 4); y2 < y2Max; y2++)
+                for (var y2 = y2Min; y2 < y2Max; y2++)
                 {
                     if (Board[x2, y2] != '-')
                     {

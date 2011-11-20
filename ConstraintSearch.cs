@@ -11,7 +11,7 @@ namespace SuperSudoku
     /// <summary>
     /// CSP Search
     /// </summary>
-    public sealed class ConstraintSearch : BaseSearch
+    public class ConstraintSearch : BaseSearch
     {
         /// <summary>
         /// Finds the next position by finding the next character using the MRV
